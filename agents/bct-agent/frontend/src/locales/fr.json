@@ -1,0 +1,18 @@
+{
+  "new_chat": "Nouvelle discussion",
+  "recent_discussions": "Discussions récentes",
+  "rename": "Renommer",
+  "delete": "Supprimer",
+  "more": "Plus",
+  "welcome_message": "Comment puis-je vous aider aujourd'hui ?",
+  "title": "Banque Centrale de Tunisie",
+  "disclaimer": "L'IA peut commettre des erreurs. Vérifiez les informations importantes. Toutes les réponses sont basées sur les documents officiels de la BCT.",
+  "chat_placeholder": "Posez une question sur la réglementation financière tunisienne...",
+  "uploading": "Téléchargement...",
+  "add_file": "Ajouter un fichier",
+  "bct_title": "Banque Centrale de Tunisie",
+  "login_prompt": "Veuillez vous connecter pour accéder à l'Assistant Réglementaire.",
+  "username": "Nom d'utilisateur",
+  "password": "Mot de passe",
+  "login": "Connexion"
+}

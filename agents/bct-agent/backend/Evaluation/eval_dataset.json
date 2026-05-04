@@ -1,0 +1,488 @@
+[
+  {
+    "question": "Une société résidente exerçant une activité commerciale sollicite une autorisation pour bénéficier d'une enveloppe complémentaire au titre de son Allocation pour Voyages d'Affaires (AVA). Outre les documents administratifs de base (formulaire n°2, programme des déplacements, statuts, identifiant fiscal et décompte annuel), quels documents spécifiques liés à la nature de son activité et à sa situation fiscale doit-elle obligatoirement fournir, et comment cette exigence diffère-t-elle si l'entreprise a plutôt le statut d'exportateur ?",
+    "contexts": 
+      "Fiche n° 8 : Demandes d’autorisation pour des enveloppes complémentaires à titre d’Allocations pour Voyages d’Affaires (AVA)\n...\nPour les AVA – Autres Activités :\n▪ Copie de la déclaration fiscale de l’année précédente (n-1), à défaut celle de l’année n-2 ;\n▪ Pour les sociétés ayant une activité commerciale : attestation bancaire précisant le total en dinars des importations réalisées au cours de l’année précédente.\nPour les AVA – Exportateurs :\n▪ Une attestation bancaire précisant les rapatriements en devises encaissés depuis le début de l’année en cours."
+    ,
+    "ground_truth": "La société commerciale doit impérativement fournir la copie de sa déclaration fiscale de l'année précédente (ou, à défaut, celle de l'année n-2) ainsi qu'une attestation bancaire précisant le montant total en dinars de ses importations réalisées durant l'année écoulée. En revanche, si l'entreprise était exportatrice, l'exigence financière diffère : elle doit présenter à la place une attestation bancaire justifiant les rapatriements en devises qu'elle a effectivement encaissés depuis le début de l'année en cours.",
+    "metadata": {
+      "source": "Fiche n° 8 - Liste des documents à fournir pour une Autorisation de Transfert",
+      "page_numbers": [7]
+    }
+  },
+  {
+    "question": "Un client se présente pour régulariser une allocation touristique qui lui a été délivrée via une carte d'allocation. Il affirme avoir effectué son séjour, mais en dépassant le délai réglementaire. Quels sont les documents précis que vous devez réunir pour valider ce dossier, et quelle pièce technique supplémentaire aurait dû être exigée s'il n'avait finalement pas quitté le territoire tunisien ?",
+    "contexts": 
+      "Fiche N° 15 : Demandes de régularisation d’une allocation touristique\n...\n2) Allocations touristiques servies par cartes allocations touristiques et non suivies d’un voyage\n▪ une demande d’autorisation sur formulaire n°2, en deux exemplaires originaux dûment visée par le demandeur de l’autorisation ;\n▪ 2 copies du passeport en entier ;\n▪ 2 copies de la carte d’identité nationale ;\n▪ Attestation précisant le(s) mouvement(s) de ladite carte de paiement et sa remise à zéro.\n3) Allocations touristiques servies en espèces ou par cartes allocations touristiques et suivis d’un voyage hors délai règlementaire\n▪ une demande d’autorisation sur formulaire n°2, en deux exemplaires originaux dûment visée par le demandeur de l’autorisation\n▪ 2 copies du passeport en entier\n▪ 2 copies de la carte d’identité nationale"
+    ,
+    "ground_truth": "Pour régulariser une allocation suivie d'un voyage hors délai réglementaire, vous devez collecter une demande d'autorisation sur formulaire n°2 en deux exemplaires originaux dûment visés, deux copies intégrales du passeport et deux copies de la carte d'identité nationale. Toutefois, si le voyage avait été annulé (non suivi d'un voyage), il aurait fallu exiger en supplément une attestation détaillant les mouvements de la carte de paiement concernée et confirmant sa remise à zéro.",
+    "metadata": {
+      "source": "Fiche N° 15 - Liste des documents à fournir pour une Autorisation de Transfert",
+      "page_numbers": [11, 12]
+    }
+  },
+  {
+    "question": "Une entreprise titulaire d'un marché en Tunisie souhaite effectuer une opération de débit sur son compte spécial marché en dinars pour un motif non prévu par la circulaire n° 2016-09. Si cette demande d'autorisation intervient au moment de la clôture du projet, quelle pièce technique officielle validant l'achèvement des travaux est exigée en complément des documents bancaires et d'identification habituels ?",
+    "contexts": 
+      "Fiche N° 3 : Opérations sur le compte spécial marché en dinars\n...\n2) Débit d’un compte spécial marché (Opérations au débit non prévues par l’avis de change n°5 et la circulaire n° 2016-09)\n▪ Une demande d’autorisation sur formulaire N°2, en cinq exemplaires dûment visés, établie par l'Intermédiaire Agréé concerné;\n▪ Copie du marché et de ses éventuels avenants ;\n▪ Copie de l’éventuel acte de groupement ;\n▪ Carte de commerçant relative au marché concerné\n▪ Carte d'identification fiscale & Carte SINDA de l’établissement stable ;\n▪ Extrait récent du compte spécial en dinars ;\n▪ Les avis de crédit justifiant les encaissements réalisés au crédit du compte ;\n▪ Copie du PV de la réception définitive du marché, en cas de clôture du marché."
+    ,
+    "ground_truth": "En cas de clôture du marché, l'opérateur doit impérativement fournir une copie du procès-verbal (PV) de la réception définitive du marché.",
+    "metadata": {
+      "source": "Fiche N° 3 - Liste des documents à fournir pour une Autorisation de Transfert",
+      "page_numbers": [4]
+    }
+  },
+  {
+    "question": "Un étudiant tunisien sollicite un transfert en devises pour effectuer un stage à l'étranger, mais il ne parvient pas à obtenir une convention de stage formellement cosignée par l'entreprise d'accueil et son université. Par quelle combinaison précise de documents peut-il justifier de son affectation et de sa rémunération éventuelle, et quelle pièce justifiant son statut boursier est requise ?",
+    "contexts": 
+      "Fiche N° 12 : Demandes de transfert au titre de frais de stage à l’étranger\n▪ Demande d'autorisation sur formulaire N° 1, en cinq exemplaires, dûment visée par l’opérateur demandeur ;\n▪ Copie de la CIN de l’étudiant ;\n▪ Reçu de dépôt de la demande de l’attestation de boursier / non boursier délivrée par le Ministère de l’Enseignement Supérieur, téléchargeable via le site www.best.rnu.tn\n▪ Document précisant la période de stage et la rémunération à servir éventuellement :\no Convention de stage dûment signée par l’établissement d’accueil étranger et l’établissement d’enseignement tunisien, ou\no Une lettre d’invitation de la part de l’établissement étranger et l’avis favorable de l’établissement d’enseignement tunisien de rattachement."
+    ,
+    "ground_truth": "En l'absence d'une convention cosignée, l'étudiant peut justifier son stage en présentant une lettre d'invitation émise par l'établissement étranger, obligatoirement accompagnée de l'avis favorable de son établissement d'enseignement tunisien de rattachement. Pour justifier de son statut boursier, il doit fournir le reçu de dépôt de la demande d'attestation de boursier/non boursier, document téléchargeable via le site du Ministère de l'Enseignement Supérieur (www.best.rnu.tn).",
+    "metadata": {
+      "source": "Fiche N° 12 - Liste des documents à fournir pour une Autorisation de Transfert",
+      "page_numbers": [10]
+    }
+  },
+  {
+    "question": "Quel est le délai réglementaire accordé à une banque résidente pour transmettre ses déclarations mensuelles et trimestrielles à la Banque Centrale de Tunisie, et quel est l'impact d'un jour férié sur cette échéance ?",
+    "contexts": 
+      "Le quinzième jour calendaire suivant la date de référence pour les déclarations mensuelles sauf indication contraire prévue par la présente circulaire.\n- Le 30 ème jour calendaire suivant la date de référence pour les déclarations trimestrielles sauf indication contraire prévue par la présente circulaire.\n- Lorsque le délai maximum de déclaration ne correspond pas à un jour ouvrable, les informations sont transmises le jour ouvrable suivant."
+    ,
+    "ground_truth": "Les déclarations mensuelles doivent être transmises au plus tard le 15ème jour calendaire suivant la date de référence, et les déclarations trimestrielles le 30ème jour calendaire. Si la date limite de déclaration tombe un jour non ouvrable (comme un jour férié ou un dimanche), le délai est prorogé jusqu'au jour ouvrable suivant.",
+    "metadata": {
+      "source": "Article 6 : - Réglementation bancaire REGLEMENTATION COMPTABLE",
+      "page_numbers": [6, 7]
+    }
+  },
+  {
+    "question": "En cas de détection d'une erreur significative dans un reporting déjà validé et transmis via le Système d’Échange des Données (SED), quelle est la procédure de régularisation imposée au responsable du Reporting ?",
+    "contexts": 
+      "En cas erreur de déclaration, établissement assujetti est tenu de rectifier sans délai les déclarations déjà communiquées.\nLes corrections significatives apportées aux déclarations déjà communiquées doivent être appuyées par une note explicative dûment signée par le « responsable du Reporting ». La déclaration corrigée et la note explicative doivent être transmises par le « responsable Reporting » sans délai à la Banque Centrale de Tunisie via le syst échange des données (SED)."
+    ,
+    "ground_truth": "L'établissement doit rectifier la déclaration sans aucun délai. Si l'erreur est jugée significative, la nouvelle déclaration doit être impérativement accompagnée d'une note explicative signée par le responsable du Reporting, l'ensemble devant être transmis exclusivement via le système SED.",
+    "metadata": {
+      "source": "Article 6 : - Réglementation bancaire REGLEMENTATION COMPTABLE",
+      "page_numbers": [6, 7]
+    }
+  },
+  {
+    "question": "Lors de la détermination du périmètre prudentiel de consolidation, selon quelles conditions une entité dont le poids individuel est inférieur à 1 % doit-elle tout de même être incluse par l'établissement ?",
+    "contexts": 
+      "Condition n°1 : Il est supérieur ou égal à 1% ; ou\nCondition n°2 : le poids cumulé des entités, ayant chacune un poids inférieur à 1%, est supérieur ou égal à 10%.\nSi la condition n°2 est remplie, toutes les entités ayant chacune un poids non significatif doivent être incluses dans le périmètre prudentiel de consolidation."
+    ,
+    "ground_truth": "Bien qu'une entité soit individuellement considérée comme non significative si son poids est inférieur à 1 %, elle doit être intégrée au périmètre prudentiel de consolidation si le poids cumulé de l'ensemble des entités se trouvant sous ce seuil de 1 % est supérieur ou égal à 10 %.",
+    "metadata": {
+      "source": "Ce cadre définit : - Réglementation bancaire REGLEMENTATION COMPTABLE",
+      "page_numbers": [11, 12, 13]
+    }
+  },
+  {
+    "question": "Quelles sont les obligations de concertation d'un établissement de crédit avec la Supervision Bancaire avant la tenue de son Assemblée Générale Ordinaire annuelle ?",
+    "contexts": "Article 1 er : Les établissements de crédit doivent communiquer à la Banque Centrale de Tunisie leurs états financiers, arrêtés quinze jours au moins avant leur diffusion au public, accompagnés du rapport du ou des commissaires aux comptes ainsi que évaluation du portefeuille de leurs actifs.\nArticle 2 : Les établissements de crédit doivent se concerter avec les services de la Banque Centrale de Tunisie (Direction Générale de la Supervision Bancaire) à de fixer la date des réunions annuelles relatives à leurs situations financières et ce, avant la fixation de la date de la tenue de leurs assemblées générales des actionnaires.",
+    "ground_truth": "L'établissement doit d'abord communiquer ses états financiers et le rapport des commissaires aux comptes à la Banque Centrale au moins 15 jours avant leur diffusion publique. Ensuite, il doit obligatoirement se concerter avec la Direction Générale de la Supervision Bancaire pour fixer la date de la réunion annuelle sur sa situation financière, et ce, avant même d'arrêter la date de son Assemblée Générale des actionnaires.",
+    "metadata": {
+      "source": "NOTE AUX ETABLISSEMENTS DE CREDIT N°2006-02 DU 19 JANVIER 2006 - Réglementation bancaire REGLEMENTATION COMPTABLE",
+      "page_numbers": [4]
+    }
+  },
+  {
+    "question": "Quelles fonctions internes minimales doivent être représentées au sein du comité de pilotage chargé du projet de passage aux normes IFRS au sein d'une banque ?",
+    "contexts": "Article 5 : Financier, Risque, Crédit, Organisation, Interne et Juridique et le cas échéant des représentants des filiales de la banque ou de",
+    "ground_truth": "Le comité de pilotage du projet IFRS doit obligatoirement comprendre des représentants des fonctions suivantes : Financière, Risque, Crédit, Organisation, Contrôle Interne et Juridique. Des représentants des filiales peuvent également y être intégrés si nécessaire.",
+    "metadata": {
+      "source": "DÉCIDE : - Réglementation bancaire REGLEMENTATION COMPTABLE",
+      "page_numbers": [9, 10]
+    }
+  },
+  {
+    "question": "Lors de l'entrée en relation avec une société, à partir de quel seuil exact de détention du capital ou de droits de vote la banque doit-elle identifier un actionnaire comme bénéficiaire effectif, et quelle procédure s'applique si aucun associé n'atteint ce seuil ?",
+    "contexts": "- ala ou les personnes physiques qui détiennent directement ou indirectement un pourcentage égal ou supérieur à 20% du capital ou des droits de vote,\n- bdroit un pouvoir de c ou sur le fonctionnement de la personne morale,\n- cest la personne physique qui occupe la position de dirigeant principal de la personne morale.",
+    "ground_truth": "Le bénéficiaire effectif est la personne physique qui détient directement ou indirectement 20 % ou plus du capital ou des droits de vote de la société. Si aucune personne ne remplit ce critère ou n'exerce de contrôle par d'autres moyens, le bénéficiaire effectif à identifier est la personne physique qui occupe la position de dirigeant principal.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "DECRET GOUVERNEMENTAL N° 2019-54 DU 21 JANVIER 2019, RELATIF AUX",
+      "page_numbers": [51, 52]
+    }
+  },
+  {
+    "question": "Une agence bancaire est sollicitée par un client occasionnel pour effectuer une transaction financière ponctuelle. Quel est le seuil réglementaire à partir duquel l'agence est dans l'obligation stricte d'appliquer les mesures de vigilance requises, et comment ce seuil s'applique-t-il spécifiquement pour le versement de primes d'assurance vie ?",
+    "contexts": "Article 3 : Les personnes citées à l'article 107 de la loi n° 2015 -26 du 7 août 2015 susvisée doivent prendre les mesures de vigilance requises prévues par les articles 108 et 140 de la loi susvisée lors de l'exécution des transactions financières occasionnelles dont la valeur est égale ou supérieure à dix mille dinars.\nLes dispositions du paragraphe précédent du présent article s'appliquent aux transactions financières dont la valeur est égale ou supérieure à trois mille dinars pour la prime unique en matière d'assurance vie et à mille dinars pour les primes périodiques en matière d'assurance vie.",
+    "ground_truth": "Pour une transaction financière occasionnelle classique, l'obligation d'appliquer les mesures de vigilance se déclenche dès que le montant atteint ou dépasse 10 000 dinars. Dans le cadre de l'assurance vie, ce seuil est abaissé à 3 000 dinars pour une prime unique, et à 1 000 dinars pour des primes périodiques.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "DECRET GOUVERNEMENTAL N°2016-1098 DU 15 AOUT LES MODALITES DE FONCTIONNEMENT DE LA COMMISSION TUNISIENNE DES ANALYSES FINANCIERE.",
+      "page_numbers": [55, 56, 57]
+    }
+  },
+  {
+    "question": "Lors de l'émission d'un virement électronique international qualifié, quelles sont les informations signalétiques exhaustives concernant le donneur d'ordre qui doivent impérativement accompagner le message Swift pour garantir la traçabilité de l'opération ?",
+    "contexts": "Article 23 (nouveau) : (modifié par circulaire n°2018-09 du 18 octobre 2018)\n- comportent les informations exactes et complètes suivantes sur le donneur d'ordre:\n- a) le nom ou la dénomination sociale du donneur d'ordre;\n- sa date et son lieu de naissance.",
+    "ground_truth": "Le virement international doit obligatoirement comporter le nom ou la dénomination sociale du donneur d'ordre. En l'absence de détails explicites sur l'adresse dans l'extrait, les informations exigées portent a minima sur le nom/dénomination sociale, la date et le lieu de naissance du donneur d'ordre.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "du donneur d'ordre",
+      "page_numbers": [82, 83]
+    }
+  },
+  {
+    "question": "Suite à une déclaration d'opération suspecte, la Commission Tunisienne des Analyses Financières (CTAF) gèle provisoirement les fonds d'un client. De quel délai maximal la CTAF dispose-t-elle pour clôturer ses travaux d'analyse sous ce gel, et à quel moment précis la banque déclarante doit-elle être informée du résultat ?",
+    "contexts": "La commission tunisienne des analyses financières doit clore ses travaux dans les plus brefs délais. Toutefois, si elle a ordonné un gel provisoire des fonds, objet de la déclaration, elle doit clore ses travaux dans un délai de cinq jours, à compter de la date de la décision et en notifier les résultats au déclarant, dans un délai de vingtquatre heures à compter de la date de clôture de ses travaux.",
+    "ground_truth": "Lorsqu'un gel provisoire est ordonné, la CTAF a un délai strict de cinq jours à compter de la date de sa décision pour clôturer ses travaux. Elle doit ensuite notifier ses conclusions à la banque déclarante dans un délai maximum de 24 heures suivant la clôture des travaux.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "Art. 131 (Complété par la loi organique n° 2019-9 du 23 janvier 2019)",
+      "page_numbers": [47, 48]
+    }
+  },
+  {
+    "question": "Lors d'une mission de contrôle sur place, il est constaté qu'une succursale détruit systématiquement les dossiers d'identification (KYC) et les historiques de transactions de ses clients exactement 8 ans après la clôture de leurs comptes. Quelle obligation réglementaire précise de conservation des documents cette succursale enfreint-elle ?",
+    "contexts": "Article 51 (nouveau) (modifié par circulaire n°2018-09 du 18 octobre 2018):\nLes établissements assujettis doivent conserver les dossiers de leurs clients personnes physiques permanents ou occasionnels ou personnes morales ou constructions juridiques et de leurs bénéficiaires effectifs et les pièces se rapportant à leurs identités pendant dix ans au moins à compter de la date de la fin de la relation.\nIls doivent, en outre, conserver les documents et les informations relatifs aux opérations et transactions effectuées par leurs soins sur support électronique et/ou sur support papier pendant au moins 10 ans à compter de la date de leur réalisation",
+    "ground_truth": "La succursale enfreint l'obligation de conservation légale de 10 ans. Les dossiers des clients et les justificatifs d'identité doivent être conservés pendant au moins 10 ans après la fin de la relation d'affaires. De même, les documents relatifs aux transactions doivent être conservés pendant au moins 10 ans après leur date de réalisation.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "Article 51 (nouveau) (modifié par circulaire n°2018-09 du 18 octobre 2018):",
+      "page_numbers": [91]
+    }
+  },
+  {
+    "question": "Le devoir de signalement immédiat des actes liés au terrorisme s'impose en principe à toute personne. Toutefois, quelles sont les professions spécifiques et les catégories de personnes physiques qui bénéficient d'une exception stricte à cette obligation de dénonciation ?",
+    "contexts": "Art. 37 -compétentes, sans délais et dans la limite des actes dont il a pris connaissance, les faits, les informations ou les renseignements concernant la commission des infractions terroristes prévues par la présente loi ou leur\n.\néventuelle commission.\nSont exceptés des dispositions de l'alinéa précédent les ascendants, les descendants et le conjoint.\nSont également exceptés, les avocats et les médecins en ce qui concerne les secrets dont ils ont pris connaissance\nSont également exceptés, les journalistes conformément aux dispositions du décret-loi n° 2011-115 du 2",
+    "ground_truth": "Sont légalement exemptés de l'obligation de dénonciation les membres de la famille directe (ascendants, descendants et conjoint). Sur le plan professionnel, cette exception s'applique également aux avocats et aux médecins pour les secrets acquis dans le cadre de leurs fonctions, ainsi qu'aux journalistes pour la protection de leurs sources.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "Art. 29 -(Abrogé et remplacé par la loi organique n°2019-9 du 23 janvier 2019)",
+      "page_numbers": [16, 17]
+    }
+  },
+  {
+    "question": "Dans le dispositif de vigilance à l'égard de la clientèle, l'identification d'une Personne Politiquement Exposée (PPE) entraîne des mesures de contrôle renforcées. Au-delà de la personne exerçant directement la haute fonction, quelles autres personnes de son entourage le banquier doit-il intégrer dans ce même périmètre de vigilance renforcée ?",
+    "contexts": "Article 16 (nouveau) (modifié par circulaire n°2018-09 du 18 octobre 2018):\nSont considérés, comme personnes proches des personnes susvisées, les membres directs de leur famille: les ascendants et descendants, au premier degré ainsi que leurs conjoints.\nEst considérée comme personne ayant des rapports avec les personnes susvisées, toute personne physique connue comme entretenant avec celles-",
+    "ground_truth": "Le périmètre de vigilance renforcée s'étend obligatoirement aux membres directs de la famille de la PPE (conjoints, ainsi que les ascendants et descendants au premier degré), mais également à toute personne physique connue pour avoir des rapports étroits (étroitement associée) avec la PPE.",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "Article 16 (nouveau) (modifié par circulaire n°2018-09 du 18 octobre 2018):",
+      "page_numbers": [79]
+    }
+  },
+  {
+    "question": "Un client non-résident se présente à un guichet bancaire avec une somme importante en billets de banque étrangers en vue d'alimenter son compte. Quel est le seuil précis à partir duquel l'agence doit exiger la présentation d'une déclaration douanière justifiant l'importation de ces devises ?",
+    "contexts": "Article 4 : Sous réserve des dispositions prévues par la réglementation de change relatives à l'alimentation des comptes en devises étrangères ou en dinars convertibles ou au règlement de marchandises ou services au moyen de devises en billets de banque sur la base d'une déclaration d'importation de devises en billets de banque et en application des dispositions du premier paragraphe de l'article 114 de la loi n° 2015 -26 du 7 août 2015 susvisée, toute opération d'importation ou d'exportation de devises étrangères dont la valeur est égale ou supérieure à dix mille dinars doit, à l'entrée, à la sortie et lors d'opérations de transit, faire l'objet d'une déclaration aux services de la douane.",
+    "ground_truth": "L'agence bancaire doit impérativement exiger la déclaration douanière d'importation dès lors que la valeur des billets de banque en devises étrangères atteint ou dépasse le seuil de 10 000 dinars (ou son équivalent).",
+    "metadata": {
+      "source": "Réglementation bancaire DE LA LUTTE CONTRE LE BLANCHIMENT  D’ARGENT ET LE FINANCEMENT  DU TERRORISME",
+      "title": "DECRET GOUVERNEMENTAL N°2016-1098 DU 15 AOUT LES MODALITES DE FONCTIONNEMENT DE LA COMMISSION TUNISIENNE DES ANALYSES FINANCIERE.",
+      "page_numbers": [55, 56, 57]
+    }
+  },
+  {
+    "question": "En tant que teneur de marché sollicité par une banque consœur pour une cotation EUR/TND sur un montant de 2 millions d'euros, quelle est la marge maximale que vous pouvez appliquer entre vos cours acheteur et vendeur, et à partir de quel seuil minimal de volume d'activité annuel pouvez-vous conserver ce statut de teneur de marché ?",
+    "contexts": "Article 16 : Un Teneur de Marché est tenu de présenter une cotation ferme au comptant à double sens pour les parités EUR/TND et USD/TND si demande lui est faite par un autre Intermédiaire Agréé.\nLa marge maximale entre le cours acheteur et le cours vendeur à afficher par le Teneur de Marché est de 30 pips au maximum, pour un montant maximum en devise (EUR ou USD) de 3 millions.\n...\nLe Teneur de Marché doit effectuer au moins 5% du volume du marché des changes interbancaire au comptant en moyenne sur une année.",
+    "ground_truth": "Pour une demande de cotation EUR/TND portant sur un montant inférieur ou égal à 3 millions, la marge maximale autorisée entre le cours acheteur et le cours vendeur est de 30 pips. Par ailleurs, pour maintenir votre statut de teneur de marché, vous êtes tenu de réaliser, en moyenne sur une année, au moins 5 % du volume total du marché des changes interbancaire au comptant.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "REGLES SPECIFIQUES AUX TENEURS DE MARCHE",
+      "page_numbers": [4, 5, 6]
+    }
+  },
+  {
+    "question": "Une banque locale souhaite optimiser la rentabilité des avoirs en devises non cessibles déposés par sa clientèle. Quelle limite réglementaire s'impose à elle si elle décide de placer les fonds de ses clients résidents sur le marché financier international, par rapport au traitement réservé aux avoirs de sa clientèle non-résidente ?",
+    "contexts": "- Article 1 er : Les Intermédiaires Agréés peuvent utiliser les avoirs en devises non cessibles appartenant à leur clientèle résidente et non -résidente dans les emplois suivants:\n...\n- b) Le placement sur le marché financier international des avoirs en devises appartenant à leur clientèle nonrésidente dans les conditions fixées par circulaire de la Banque Centrale de Tunisie;\n- c) Le placement sur le marché financier international à hauteur de 20% du total des avoirs en devises appartenant à leur clientèle résidente dans les conditions fixées par circulaire de la Banque Centrale de Tunisie;",
+    "ground_truth": "L'intermédiaire agréé est soumis à un plafonnement strict pour la clientèle résidente : il ne peut placer sur le marché financier international qu'à hauteur de 20 % du total de leurs avoirs en devises. En revanche, les avoirs en devises appartenant à la clientèle non-résidente peuvent être placés sur ce même marché international sans cette restriction de plafond.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "AVIS DE CHANGE DU MINISTRE DES FINANCES REGLEMENTANT LES PLACEMENTS ET LES EMPLOIS DES AVOIRS EN DEVISES NON CESSIBLES (JORT N° 11 DU 5-02-2008)",
+      "page_numbers": [1, 2]
+    }
+  },
+  {
+    "question": "Lors d'une adjudication en devises organisée par la Banque Centrale, un teneur de marché souhaite diversifier ses offres pour maximiser ses chances d'allocation. Quelles sont les contraintes de montants par soumission et les règles encadrant la multiplicité des propositions qu'il est autorisé à formuler ?",
+    "contexts": "Article 30 : Les soumissions doivent remplir les conditions suivantes :\n- -les soumissions se font uniquement dans la devise annoncée par la Banque Centrale de Tunisie ;\n- -le montant minimum par soumission est de USD ou EUR 1 million ;\n- -le montant maximum par soumission est de USD ou EUR 30 millions ;\n- -chaque soumission peut être composée au plus de 3 propositions portant sur un nombre entier, et séparées par au moins 1 pip ;\n- -le montant de la soumission ne doit pas impliquer un dépassement des limites réglementaires des positions de change.",
+    "ground_truth": "Lors d'une soumission, le montant proposé doit être compris entre un minimum de 1 million et un maximum de 30 millions (en USD ou EUR). Le soumissionnaire a la possibilité d'inclure jusqu'à 3 propositions distinctes par soumission, à condition que celles-ci portent sur des nombres entiers et soient espacées d'au moins 1 pip.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "ELIGIBILITE DES SOUMISSIONS",
+      "page_numbers": [6, 7]
+    }
+  },
+  {
+    "question": "Dans le cadre de la gestion des risques inhérents aux opérations de change, quels sont les seuils maximaux d'exposition que l'intermédiaire agréé doit respecter en permanence concernant sa position nette globale, tant au niveau d'une devise spécifique qu'au niveau agrégé ?",
+    "contexts": "Article 50 : Chaque Intermédiaire Agréé est tenu de respecter de façon permanente :\n1) un rapport maximum de 10% entre le montant de la position nette globale dans chaque devise et le montant de ses fonds propres nets ;\n2) un rapport maximum de 20% entre le montant de la position de change globale et le montant de ses fonds propres nets. Les fonds propres nets sont déterminés conformément aux dispositions du titre I de la circulaire de la Banque Centrale de Tunisie n° 2018 -06 du 5 juin 2018 portant sur les normes d'adéquation des fonds propres.",
+    "ground_truth": "L'intermédiaire agréé doit maintenir en permanence deux ratios critiques : sa position nette globale dans chaque devise ne doit pas excéder 10 % de ses fonds propres nets. De plus, le cumul de sa position de change globale, toutes devises confondues, ne doit pas dépasser 20 % de ses fonds propres nets.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "DEFINITION ET DETERMINATION DE LA POSITION NETTE GLOBALE EN DEVISES",
+      "page_numbers": [9]
+    }
+  },
+  {
+    "question": "Une agence bancaire accumule un excédent de billets de banque étrangers et décide de les céder à la Banque Centrale contre un crédit équivalent sur son compte en devises. Quelle condition financière tarifaire la Banque Centrale applique-t-elle spécifiquement lors de ce type de rachat (contre devises), qui ne s'applique pas lors d'une cession contre des dinars ?",
+    "contexts": "Article 39 : La Banque Centrale de Tunisie achète auprès des Intermédiaires Agréés les billets de banque étrangers contre dinar ou contre devise. Les ventes de billets de banque étrangers par la Banque Centrale de Tunisie aux Intermédiaires Agréés se font seulement contre dinar.\nLes achats des billets de banque étrangers par la Banque Centrale de Tunisie contre devise se font seulement contre la devise de libellé du billet de banque étranger moyennant une commission de 0.25%, prélevée sur le montant des billets à\nacheter.",
+    "ground_truth": "Lorsque la Banque Centrale achète des billets de banque étrangers contre la devise de leur libellé (et non contre des dinars), elle applique une commission de 0,25 % prélevée directement sur le montant des billets achetés.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "CHAPITRE 2 OPERATIONS SUR BILLETS DE BANQUE ETRANGERS ET CHEQUES DE VOYAGE",
+      "page_numbers": [7]
+    }
+  },
+  {
+    "question": "Afin de placer ses excédents de liquidité sur le marché monétaire en devises, un intermédiaire agréé sélectionne plusieurs banques correspondantes étrangères. Quel critère qualitatif strict, basé sur l'évaluation des agences de notation internationales, doit-il impérativement vérifier pour valider le risque de crédit de ces contreparties ?",
+    "contexts": "Article 54 : Ratings). Cette notation doit être au minimum de A-2 (S&P) ou une notation équivalente.",
+    "ground_truth": "Avant de confier ses excédents à une banque correspondante étrangère, l'intermédiaire agréé doit obligatoirement vérifier que celle-ci bénéficie d'une notation minimale de risque à court terme de niveau A-2 selon l'agence Standard & Poor's, ou d'une notation rigoureusement équivalente issue d'une autre agence reconnue.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "MARCHE MONETAIRE EN DEVISES",
+      "page_numbers": [9]
+    }
+  },
+  {
+    "question": "Pour ajuster les besoins de sa trésorerie de façon transitoire, une banque recourt à des opérations de SWAPS devise/devise afin de prêter ses excédents dans une monnaie différant de celle des dépôts initiaux de sa clientèle. Quelle est l'échéance maximale que la réglementation autorise pour le dénouement de ce type d'opération croisée ?",
+    "contexts": "A cet effet, les Intermédiaires Agréés sont en outre autorisés :\n- a) à prêter, moyennant des SWAPS devise/devise d'une durée maximum de 12 mois, leurs excédents de liquidités dans une monnaie autre que celle des dépôts de leur clientèle et des emprunts de même durée obtenus en contrepartie des prêts ainsi accordés.",
+    "ground_truth": "Pour les opérations d'ajustement via des SWAPS devise/devise (où la banque prête dans une monnaie et emprunte en contrepartie), la réglementation impose une durée maximale stricte de 12 mois.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "AVIS DE CHANGE DU MINISTRE DES FINANCES REGLEMENTANT LES PLACEMENTS ET LES EMPLOIS DES AVOIRS EN DEVISES NON CESSIBLES (JORT N° 11 DU 5-02-2008)",
+      "page_numbers": [1, 2]
+    }
+  },
+  {
+    "question": "Deux intermédiaires agréés concluent une transaction de change au comptant (spot) sur la plateforme Reuters Dealing. Quel est le délai de rigueur standard pour la livraison physique des contre-valeurs, et la réglementation leur accorde-t-elle une marge de manœuvre pour modifier ce délai d'un commun accord ?",
+    "contexts": "Article 10 : Le délai d'usance pour la livraison des contre-valeurs dans les opérations de change au comptant est de deux jours ouvrables. Toutefois, les Intermédiaires Agréés peuvent convenir entre eux, à titre exceptionnel, de délais inférieurs.",
+    "ground_truth": "Le délai d'usance standard pour la livraison des contre-valeurs est fixé à deux jours ouvrables. Néanmoins, la réglementation autorise les deux parties interbancaires à s'entendre, à titre exceptionnel, pour appliquer un délai de dénouement inférieur à ces deux jours.",
+    "metadata": {
+      "source": "Reglementation des Changes MARCHE MONETAIRE EN DEVISES",
+      "title": "SECTION 1 REGLES DE FONCTIONNEMENT",
+      "page_numbers": [4]
+    }
+  },
+  {
+    "question": "Lors du calcul des réserves obligatoires pour une période incluant des jours fériés, comment une banque doit-elle déterminer le solde de son compte courant pour ces dates spécifiques, et à quelle condition le solde quotidien moyen de la période est-il jugé réglementaire ?",
+    "contexts": "La réserve obligatoire est constituée par les soldes créditeurs, au titre de la période de constitution, du compte courant ouvert sur les livres de la Banque Centrale de Tunisie.\nPour les jours fériés de la période, le solde à prendre en considération est celui du dernier jour ouvrable précédent.\nLe solde quotidien moyen du compte courant de chaque banque doit être au moins égal au montant requis au titre de la réserve obligatoire.",
+    "ground_truth": "Pour tout jour férié inclus dans la période de constitution, la banque doit retenir le solde de son compte courant tel qu'arrêté à l'issue du dernier jour ouvrable qui le précède. In fine, pour être en règle, la moyenne des soldes quotidiens calculée sur l'ensemble de la période doit atteindre au minimum le montant exigé au titre de la réserve obligatoire.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Article 13 : Vérification du respect des réserves obligatoires",
+      "page_numbers": [4]
+    }
+  },
+  {
+    "question": "Une banque souhaite s'engager dans les opérations de politique monétaire de la BCT. Outre l'obligation d'être soumise au contrôle de la Banque Centrale via ses ratios de fonds propres et de liquidité, quelle autre exigence fondamentale doit-elle remplir pour être reconnue comme « contrepartie éligible » ?",
+    "contexts": "Ont la qualité de « contreparties éligibles » aux opérations de politique monétaire, les banques au sens de la loi n° 2016 -48 du 11 juillet 2016 relative aux banques et aux établissements financiers et qui remplissent cumulativement les conditions suivantes :\n- -Tunisie, notamment sur la base des ratios de fonds propres et de liquidité, communiqués régulièrement par les banques ; et\n- -Elles remplissent les critères opérationnels fixés par la Banque Centrale de Tunisie pour garantir la conduite efficace de ses opérations et pour assurer le bon fonctionnement du marché monétaire.",
+    "ground_truth": "Pour être éligible, la banque doit, en plus de satisfaire aux exigences de supervision prudentielle, remplir l'ensemble des critères opérationnels définis par la Banque Centrale afin d'assurer l'efficacité de l'exécution des opérations et le bon fonctionnement du marché monétaire.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Article 2 : Contreparties éligibles",
+      "page_numbers": [2]
+    }
+  },
+  {
+    "question": "Si une banque clôture sa période de constitution des réserves obligatoires en affichant une insuffisance par rapport au montant exigé, quelle est la formule exacte de la sanction tarifaire que la Banque Centrale appliquera sur ce découvert ?",
+    "contexts": "vigueur majoré de 2,5 points de pourcentage.",
+    "ground_truth": "La Banque Centrale de Tunisie pénalisera l'insuffisance constatée en appliquant au déficit un taux correspondant au taux de la facilité de prêt marginal en vigueur, auquel s'ajoute une majoration stricte de 2,5 points de pourcentage.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Pénalités en cas de manquement concernant les réserves obligatoires",
+      "page_numbers": [37]
+    }
+  },
+  {
+    "question": "Dans le cadre d'une opération de cession temporaire destinée à retirer des liquidités (adjudication à taux multiples), comment la Banque Centrale procède-t-elle à l'allocation lorsque le cumul des offres proposées au taux marginal retenu excède le montant résiduel à retirer ?",
+    "contexts": "- d) -à-dire le taux de report/déport marginal), le montant global des offres excède le montant résiduel à adjuger, ce dernier est adjugé au prorata des offres, en fonction du rapport entre le montant résiduel à adjuger et le montant total des offres au taux de report/déport marginal.\n- e) Le montant adjugé à chaque contrepartie est arrondi au million de dinars le plus proche.",
+    "ground_truth": "Le montant résiduel disponible est réparti au prorata entre les offres soumises à ce taux marginal, proportionnellement au rapport entre le montant restant à adjuger et la somme totale des offres proposées à ce taux. Le résultat alloué à chaque banque est ensuite arrondi au million de dinars le plus proche.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Article 35",
+      "page_numbers": [30]
+    }
+  },
+  {
+    "question": "Comment la valeur de garantie potentielle (CV) d'un actif non négociable mobilisé est-elle mathématiquement déterminée, et de quelle variable dépend le paramètre 'H' dans cette formule d'atténuation des risques ?",
+    "contexts": "La valeur des actifs non négociables après application des mesures de contrôle des risques est calculée selon la formule suivante : CV = O x (1 H), où\n- CV -à-dire montant potentiel de refinancement\n- O\n- H = décote(s) publiée(s) par la Banque Centrale de Tunisie sur son système CAER et sur son site web",
+    "ground_truth": "La valeur de garantie potentielle est calculée via la formule CV = O x (1 - H), où 'O' représente l'encours du crédit et 'H' désigne la décote appliquée par la Banque Centrale. Cette décote varie notamment selon la classe de risque du débiteur concerné.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Mesures de contrôle des risques pour les actifs non négociables",
+      "page_numbers": [34]
+    }
+  },
+  {
+    "question": "Une banque envisage de mobiliser une créance non négociable assortie d'une garantie sur fonds budgétaires de l'État pour se refinancer. Ce dossier est-il acceptable par la BCT, et quelles sont les catégories exclusives de débiteurs tolérées pour ce type d'actif ?",
+    "contexts": "Les actifs non négociables admis en garantie des opérations de refinancement doivent respecter les critères -après :\n- -vis-à -crédit extérieures ou sur des fonds budgétaires ne sont pas considérés comme étant des actifs éligibles ;\n- -les débiteurs de créances bancaires éligibles doivent être des entreprises non financières résidentes, des entités du secteur public ainsi que des personnes physiques résidentes ;",
+    "ground_truth": "Non, cette créance sera catégoriquement rejetée, car les actifs bénéficiant de garanties sur fonds budgétaires ou extérieures sont exclus du refinancement. Les seules catégories de débiteurs admissibles sont les entreprises non financières résidentes, les entités du secteur public et les personnes physiques résidentes en Tunisie.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Article 17",
+      "page_numbers": [5]
+    }
+  },
+  {
+    "question": "Dans le cadre de la convention de mobilisation des créances bancaires, quels sont les anomalies spécifiques touchant les données déclaratives (CAER) ou le cadre juridique de la créance qui déclenchent automatiquement un scénario de défaillance de la contrepartie ?",
+    "contexts": "Constitue un cas de défaillance l'un des événements suivants :\n1-Toute déclaration à la CAER qui se révèle avoir été inexacte au moment où elle a été faite par la contrepartie, ou cesse d'être exacte, notamment concernant la nature et la codification des créances, le ;\n... \n- 3-Tout événement susceptible d'entraîner la nullité, l'inopposabilité ou la disparition d'une quelconque sûreté ou garantie rattachée aux créances cédées.",
+    "ground_truth": "Un cas de défaillance est prononcé si la banque a transmis au système CAER une déclaration inexacte au moment des faits ou si cette déclaration ne l'est plus ultérieurement (notamment sur la nature ou la codification des créances). Par ailleurs, tout événement juridique venant menacer la validité, l'opposabilité ou entraînant la disparition d'une sûreté adossée aux créances cédées constitue également une défaillance.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Article 13 : Cas de défaillance",
+      "page_numbers": [56]
+    }
+  },
+  {
+    "question": "Lors du dénouement d'une opération de politique monétaire, une banque ne parvient pas à livrer 65 % du montant total des garanties qu'elle s'était engagée à fournir. Quelle est la durée exacte de la suspension qui lui sera appliquée par la BCT suite à cette carence ?",
+    "contexts": "- a) application d'une suspension d'un mois si le montant des garanties ou des espèces non livrées est inférieur ou égal à 40 % du total des garanties ou espèces à livrer ;\n- b) application d'une suspension de deux mois si le montant des garanties ou des espèces non livrées est supérieur à 40 % sans dépasser 80 % du total des garanties ou espèces à livrer ;\n- c) application d'une suspension de trois mois si le montant des garanties ou des espèces non livrées est supérieur à 80 % du total des garanties ou espèces à livrer.",
+    "ground_truth": "Puisque le taux de non-livraison (65 %) se situe dans la fourchette strictement supérieure à 40 % et inférieure ou égale à 80 %, la Banque Centrale imposera à la banque contrevenante une suspension d'une durée de deux mois.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "REGIME DES PENALITES ET SUSPENSION IMPOSEE PAR LA BANQUE CENTRALE CONFORMEMENT A LA QUATRIEME PARTIE",
+      "page_numbers": [45]
+    }
+  },
+  {
+    "question": "Quelle est la date calendaire de règlement exigée pour l'émission de certificats de dette de la Banque Centrale de Tunisie lorsqu'elle est exécutée par le biais d'une procédure d'adjudication (par rapport au jour 'T' de la transaction) ?",
+    "contexts": "Instrument de politique  monétaire, 1 = Date de règlement des opérations à  effectuées par des procédures. Instrument de politique  monétaire, 2 = Date de règlement des opérations à  effectuées par des procédures  bilatérales.\n... \nEmissions de certificats de dette de  la Banque Centrale de Tunisie, 1 = T+2. Emissions de certificats de dette de  la Banque Centrale de Tunisie, 2 = \n(*) La date de règlement correspond à des jours ouvrables. T fait référence au jour de la transaction.",
+    "ground_truth": "Pour une émission de certificats de dette de la BCT exécutée via une procédure d'adjudication, la date de règlement est fixée à « T+2 », soit très précisément le deuxième jour ouvrable suivant le jour de l'exécution de la transaction.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "(*)",
+      "page_numbers": [32]
+    }
+  },
+  {
+    "question": "En ce qui concerne les créances non négociables remises en garantie, quelles sont les quatre assurances exactes que la banque doit fournir trimestriellement par écrit à la BCT, et qui est mandaté pour auditer ces éléments sur place ?",
+    "contexts": "La Banque centrale exige, au moins chaque trimestre, une confirmation écrite de la part de chaque contrepartie, par laquelle celle-ci certifie :\n- a) que les créances bancaires existent réellement ;\n- b) que les créances bancaires sont conformes aux critères d'éligibilité appliqués ;\n- c) que la créance bancaire en question n'est pas utilisée simultanément en garantie au profit d'un tiers ;\n- d) qu'elle s'engage à informer la Banque centrale, au plus tard au cours de la journée ouvrable suivante, de tout événement affectant de manière significative la créance bancaire, en particulier des remboursements anticipés, partiels ou intégraux, et de la détérioration de la solvabilité du débiteur.\n4. expertcomptables de Tunisie, au moins une fois par an, à des contrôles aléatoires et à des investigations portant sur la qualité et la véracité des informations objet de la confirmation écrite citée dans le paragraphe 3 du présent article.",
+    "ground_truth": "La banque doit certifier trimestriellement que : 1) les créances existent réellement ; 2) elles respectent strictement les critères d'éligibilité ; 3) elles ne sont pas nantis ailleurs simultanément ; 4) elle s'engage à signaler tout événement significatif (remboursement, baisse de solvabilité) le jour ouvrable suivant. La BCT mandate ensuite son corps de contrôle interne ou des experts-comptables de Tunisie, au moins une fois par an, pour vérifier la véracité de ces déclarations via des contrôles sur place.",
+    "metadata": {
+      "source": "Réglementation bancaire CONDITIONS DE BANQUECirculaire aux Banques N°2017-02 du 10 mars 2017",
+      "title": "Contrôle des actifs non négociables",
+      "page_numbers": [36]
+    }
+  },
+  {
+    "question": "Une banque adhérente fait face à une demande du Fonds de garantie pour le versement d'une cotisation exceptionnelle. Comment le montant maximal de cette cotisation est-il plafonné, et quelles sont les conditions préalables imposées au Fonds avant de pouvoir l'exiger légalement ?",
+    "contexts": "Les banques adhérentes sont tenues de payer une cotisation exceptionnelle dont le montant peut atteindre au maximum le total des cotisations payées par chaque banque au titre des quatre années précédentes.\n- Le fonds ne peut imposer aux banques adhérentes de payer la cotisation exceptionnelle qu'après consultation de la Banque Centrale de Tunisie.",
+    "ground_truth": "Le montant de la cotisation exceptionnelle est strictement plafonné au cumul des cotisations payées par la banque concernée au cours des quatre années précédentes. Avant d'imposer ce paiement exceptionnel, le Fonds de garantie a l'obligation formelle de consulter préalablement la Banque Centrale de Tunisie.",
+    "metadata": {
+      "source": "Réglementation bancaire GARANTIE DES DEPOTS BANCAIRES",
+      "title": "Chapitre III Les cotisations à la charge des banques",
+      "page_numbers": [3]
+    }
+  },
+  {
+    "question": "Le Comité de surveillance décide d'intervenir financièrement pour sauver une banque considérée comme ayant une importance systémique. Les résultats du test du moindre coût s'imposent-ils à sa décision, et quels sont les plafonds financiers absolus limitant cette intervention de sauvetage ?",
+    "contexts": "Les résultats du test de moindre coût ne revêtent pas un caractère obligatoire quant à la décision du comité de surveillance pour l'intervention du fonds dans le cadre d'un plan de résolution des banques d'importance systémique ou toute autre banque jugée à effet systémique au moment de la constatation de sa situation compromise.\nLorsque le comité de surveillance décide d'intervenir dans le plan de résolution d'une banque d'importance systémique... il doit arrêter les conditions d'intervention du fonds à condition que les financements octroyés ne dépassent pas les seuils maximums suivants :\n- -le montant prévisionnel net d'indemnisation des déposants en cas de liquidation de la banque concernée, et,\n- -50% du volume cible des réserves du fonds prévu au premier paragraphe de l'article 25 du présent décret gouvernemental.\nLe comité de surveillance ne peut décider l'intervention... que si le plan de résolution prévoie une réduction préalable du capital de la banque concernée afin d'absorber les pertes cumulées...",
+    "ground_truth": "Pour une banque d'importance systémique, les résultats du test du moindre coût ne sont pas contraignants pour le Comité de surveillance. Toutefois, l'intervention financière du Fonds est doublement plafonnée : elle ne doit dépasser ni le montant prévisionnel net de l'indemnisation des déposants en cas de liquidation, ni 50 % du volume cible des réserves globales du Fonds. De plus, cette intervention exige impérativement une réduction préalable du capital de la banque pour absorber ses pertes cumulées.",
+    "metadata": {
+      "source": "Réglementation bancaire GARANTIE DES DEPOTS BANCAIRES",
+      "title": "Chapitre IV La gestion des comptes du fonds de garanties des dépôts bancaires",
+      "page_numbers": [3, 4]
+    }
+  },
+  {
+    "question": "Lors de l'indisponibilité des dépôts d'une banque, deux clients détiennent un compte joint dont les quotes-parts ne sont pas spécifiées dans la convention. L'un d'eux possède également un compte individuel dans la même banque. Comment le Fonds de garantie calcule-t-il l'indemnisation globale de ce déposant, en tenant compte du traitement des opérations en cours (comme les intérêts courus) et de la limite d'indemnisation ?",
+    "contexts": "Sont également prises en compte pour le calcul des montants nets d'indemnisation les opérations créditrices suivantes :\n- l l'encaissement dans le compte des intérêts courus et non échus à la date de la constatation de l'indisponibilité des dépôts,\n...\nLe montant maximum d'indemnisation reçu par chaque déposant auprès du fonds de garantie des dépôts bancaires est fixé à 60 mille dinars...\n...\nLes dépôts garantis inscrits dans les comptes joints sont distribués selon la quote-part de chaque déposant dans le compte, et en absence d'informations sur ces quotes-parts, le fonds est tenu de distribuer le solde du compte à parts égales entre les co-titulaires du compte joint.\nPour le besoin d'indemnisation des déposants, les parts revenant à chaque déposant dans un compte joint... sont ajoutées à ses dépôts inscrits dans les autres comptes ouverts en son nom auprès de la banque concernée",
+    "ground_truth": "En l'absence de quotes-parts précisées, le solde du compte joint est divisé à parts égales. La part revenant à ce déposant est ensuite cumulée avec le solde de son compte individuel. Pour déterminer le montant net éligible, le Fonds intègre au calcul les opérations créditrices en cours, telles que les intérêts courus mais non encore échus. L'indemnisation totale versée à ce déposant, pour la consolidation de tous ses avoirs dans cette banque, sera ensuite strictement plafonnée à 60 000 dinars.",
+    "metadata": {
+      "source": "Réglementation bancaire GARANTIE DES DEPOTS BANCAIRES",
+      "title": "Chapitre V Les procédures et les modalités d'indemnisation",
+      "page_numbers": [4, 5]
+    }
+  },
+  {
+    "question": "Une entreprise résidente exportatrice ayant réalisé un chiffre d'affaires en devises de 500 000 DT l'année dernière souhaite ouvrir une filiale à l'étranger. Quel est le montant maximal qu'elle est autorisée à transférer annuellement pour ce projet sans utiliser ses propres comptes professionnels en devises ?",
+    "contexts": "Article 2 (nouveau) : Les montants que les entreprises résidentes exportatrices peuvent... transférer pour le financement des investissements... sont fixés annuellement comme suit : De 300.001 à 600.000... Succursales, filiales ou prises de participation dans des sociétés à l'étranger (DT) = 300.000.",
+    "ground_truth": "Pour un chiffre d'affaires à l'export situé entre 300 001 et 600 000 DT, le plafond annuel de transfert autorisé pour le financement d'une filiale, d'une succursale ou d'une prise de participation est fixé à 300 000 DT.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "AVIS DE CHANGE DU MINISTRE DES FINANCES RELATIF' AUX INVESTISSEMENTS À L'ÉTRANGER (JORT DU 18 JANVIER 2005)",
+      "page_numbers": [1, 2]
+    }
+  },
+  {
+    "question": "Dans quelle mesure une entreprise exportatrice peut-elle s'affranchir des plafonds liés à son chiffre d'affaires pour financer un investissement à l'étranger, et quelle est la limite absolue imposée dans ce cas précis ?",
+    "contexts": "Les entreprises résidentes exportatrices qui procèdent au financement susvisé par débit de leurs comptes professionnels en devises peuvent réaliser des transferts à ce titre dans la limite de 3 millions de dinars par an, quelle que soit la nature de l'investissement... et indépendamment du chiffre d'affaires de l'entreprise concernée.",
+    "ground_truth": "Une entreprise exportatrice peut transférer jusqu'à 3 millions de dinars par an, indépendamment de son chiffre d'affaires, à la condition impérative que le financement soit effectué par le débit de ses comptes professionnels en devises alimentés par ses propres exportations de biens ou de services.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "Paragraphe 1 er : Pour les entreprises exportatrices",
+      "page_numbers": [2]
+    }
+  },
+  {
+    "question": "Si une entreprise résidente non exportatrice souhaite investir dans une filiale à l'étranger et que son chiffre d'affaires déclaré à l'administration fiscale est de 2 millions de dinars, quel est le seuil de transfert qu'elle ne doit pas dépasser ?",
+    "contexts": "Article 3 (nouveau) : Les transferts à ce titre... ne peuvent dépasser annuellement les montants suivants : De 1.800.001 à 2.700.000... Succursales, filiales ou prises de participation dans des sociétés établies à l'étranger (DT) = 400.000.",
+    "ground_truth": "Pour une entreprise non exportatrice dont le chiffre d'affaires global est compris entre 1 800 001 DT et 2 700 000 DT, le montant maximal annuel transférable pour une filiale ou une prise de participation est de 400 000 DT.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "Section 2 : Les Investissements des entreprises non exportatrices.",
+      "page_numbers": [1, 2]
+    }
+  },
+  {
+    "question": "Une société résidente peut-elle cumuler les transferts autorisés pour les entreprises exportatrices (en fonction du chiffre d'affaires en devises) avec les transferts par imputation sur comptes professionnels en devises pour un même investissement ?",
+    "contexts": "Par ailleurs, il ne peut être fait de cumul entre les montants transférables en fonction du chiffre en devises déclaré à l'Administration Fiscale selon le barème fixé ci-dessus et les montants transférables par imputation sur les comptes professionnels en devises.",
+    "ground_truth": "Non, le cumul entre les montants fixés par le barème (basé sur le chiffre d'affaires déclaré) et les montants transférables via les comptes professionnels en devises est strictement interdit.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "Paragraphe 1 er : Pour les entreprises exportatrices",
+      "page_numbers": [2]
+    }
+  },
+  {
+    "question": "Quelles sont les règles de domiciliation bancaire pour une entreprise réalisant plusieurs transferts durant la même année au titre de ses investissements à l'étranger, et quelle est la procédure en cas de changement de banque ?",
+    "contexts": "Article 6 : Les transferts réalisables au cours d'une même année... doivent être domiciliés auprès d'un Intermédiaire Agréé unique. Le changement de domiciliation... est libre sous réserve de la présentation... d'une attestation délivrée par l'ancien Intermédiaire Agréé domiciliataire précisant la forme des investissements et les transferts y afférents effectués durant l'année en cours.",
+    "ground_truth": "Tous les transferts annuels pour investissements à l'étranger doivent être centralisés auprès d'un seul intermédiaire agréé. Le changement de domiciliation est possible, mais le client doit obligatoirement fournir à la nouvelle banque une attestation de l'ancienne banque détaillant les investissements déjà réalisés et les montants déjà transférés sur l'année.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "Section 2 : Réalisation des transferts",
+      "page_numbers": [3]
+    }
+  },
+  {
+    "question": "Pour l'ouverture d'un bureau de représentation à l'étranger, quels documents justificatifs immobiliers l'investisseur doit-il fournir à sa banque, et quelle est l'obligation de délai si seul une promesse de bail est disponible initialement ?",
+    "contexts": "toutes pièces justifiant de l'installation (promesse ou contrat de location...) : en cas de remise d'une promesse, le contrat définitif doit être remis à l'Intermédiaire Agréé au plus tard un mois après la date de réalisation du transfert.",
+    "ground_truth": "L'investisseur doit fournir un contrat de location ou une promesse de bail. Si le transfert est effectué sur la base d'une promesse, l'entreprise a l'obligation de remettre le contrat de bail définitif à l'intermédiaire agréé dans un délai maximum d'un mois après le transfert des fonds.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "Section 2 : Réalisation des transferts",
+      "page_numbers": [3]
+    }
+  },
+  {
+    "question": "Quelles sont les deux conditions cumulatives de capital et de financement pour qu'une société de commerce international établie en Tunisie puisse revendiquer le statut de « non-résidente » ?",
+    "contexts": "Article 6 : ... les sociétés... ne peuvent bénéficier de la qualité de «non résident» que si la part de leur capital détenue par des non résidents tunisiens ou étrangers est égale à au moins 66 % et que cette part est financée au moyen d'une importation de devises.",
+    "ground_truth": "Pour être qualifiée de non-résidente, la société doit justifier qu'au moins 66 % de son capital social est détenu par des non-résidents et que cette participation majoritaire a été exclusivement libérée par une importation de devises.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "II - Dispositions diverses",
+      "page_numbers": [7]
+    }
+  },
+  {
+    "question": "En cas de liquidation totale d'un investissement à l'étranger, quelles pièces justificatives comptables et financières l'entreprise tunisienne doit-elle impérativement transmettre au Service du Suivi des Opérations de Capitaux de la BCT ?",
+    "contexts": "Article 9 : En cas de liquidation... lesdites entreprises doivent transmettre... les documents suivants : - un procès-verbal de l'assemblée générale extraordinaire... ayant décidé la liquidation... et/ou toutes pièces relatives à la cession... les avis de crédit justifiant le rapatriement du produit de cession ou de liquidation.",
+    "ground_truth": "L'entreprise doit fournir le procès-verbal de l'AGE décidant la liquidation, les documents prouvant la cession des actifs (parts, actions ou fonds de commerce) et, obligatoirement, les avis de crédit bancaires prouvant le rapatriement effectif du produit de la liquidation en Tunisie.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "Section 3 : Information de la Banque Centrale de Tunisie",
+      "page_numbers": [3, 4]
+    }
+  },
+  {
+    "question": "Une personne morale résidente souhaite souscrire en devises à des parts d'un fonds expert. Quels documents financiers certifiés doit-elle présenter à la Banque Centrale, et quelle est l'exception de dispense prévue pour certaines institutions financières ?",
+    "contexts": "Article 2 : Tout résident... doit présenter... 4- une copie des déclarations fiscales dûment établies et états financiers certifiés... au titre des deux derniers exercices clos... Les documents prévus aux points 1, 2, 3 et 4 ne sont pas exigés pour les souscriptions réalisées par l'Etat Tunisien, la caisse de dépôts..., les banques et les établissements financiers, les sociétés d'investissement, les OPCVM, les compagnies d'assurance...",
+    "ground_truth": "La personne morale doit fournir ses déclarations fiscales et ses états financiers certifiés des deux derniers exercices clos. Toutefois, l'État, les banques, les établissements financiers, les assurances, les OPCVM et les sociétés d'investissement sont dispensés de cette remise documentaire.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "DÉCIDE :",
+      "page_numbers": [8, 9]
+    }
+  },
+  {
+    "question": "Si un investissement à l'étranger est financé par l'achat de devises sur le marché des changes, comment les produits et revenus futurs générés par cet investissement doivent-ils être encaissés par l'investisseur résident ?",
+    "contexts": "Article 4 : Les produits et les revenus... sont encaissés... comme suit : 1- en dinar après cession, sur le marché des changes, de la totalité des devises au titre des produits et revenus et ce, dans le cas où le financement... a été effectué par achat de devises.",
+    "ground_truth": "Lorsque le financement initial a été réalisé par un achat de devises contre des dinars, l'intégralité des revenus et produits générés à l'étranger doit obligatoirement être cédée sur le marché des changes et encaissée exclusivement en dinars.",
+    "metadata": {
+      "source": "Reglementation des Changes OPERATIONS EN CAPITAL INVESTISSEMENTS TUNISIENS A L'ETRANGER OU DANS LES SOCIETES NON RESIDENTES INSTALLEES EN TUNISIE",
+      "title": "DÉCIDE :",
+      "page_numbers": [8, 9]
+    }
+  }
+  
+]

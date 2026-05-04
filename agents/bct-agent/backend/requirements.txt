@@ -1,0 +1,15 @@
+langchain_core 
+langchain-google-vertexai
+langchain-google-genai
+langchain-experimental 
+langchain-community
+langchain-classic
+langchain-openai
+langchain-groq
+
+faiss-cpu  
+python-dotenv  
+fastapi
+uvicorn
+pytest 
+httpx

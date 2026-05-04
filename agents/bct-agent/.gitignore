@@ -1,0 +1,62 @@
+# =========================================
+# General & OS-specific
+# =========================================
+# macOS
+.DS_Store
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =========================================
+# Backend (Python)
+# =========================================
+# Virtual Environment
+backend/.venv/
+
+# Python cache
+backend/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data, indexes, and large notebooks
+backend/DataSource/
+backend/JSON_documents/
+backend/Embedding_Process.ipynb
+
+# =========================================
+# Frontend (Next.js)
+# =========================================
+# Dependencies
+frontend/node_modules/
+.pnp
+.pnp.*
+
+# Build outputs
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Next.js auto-generated file
+next-env.d.ts
+
+# Vercel deployment files
+.vercel/
+
+# =========================================
+# Sensitive Information
+# =========================================
+# Ignore all .env files in any directory
+**/.env
+**/.env.*
+# But DO NOT ignore .env.example files
+!**/.env.example

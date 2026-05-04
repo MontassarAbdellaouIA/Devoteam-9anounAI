@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "agentic_rag.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "agentic_rag.py"
+    }
+  ],
+  "functions": {
+    "agentic_rag.py": {
+      "excludeFiles": "{.venv,**.md,**.png,Questions_example}"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "new_chat": "New Chat",
+    "recent_discussions": "Recent Discussions",
+    "rename": "Rename",
+    "delete": "Delete",
+    "more": "More",
+    "welcome_message": "How can I help you today?",
+    "title": "Central Bank of Tunisia",
+    "disclaimer": "AI can make mistakes. Check important information. All answers are based on official BCT documents.",
+    "chat_placeholder": "Ask a question about Tunisian financial regulation...",
+    "uploading": "Uploading...",
+    "add_file": "Add a file",
+    "bct_title": "Central Bank of Tunisia",
+    "login_prompt": "Please log in to access the Regulatory Assistant.",
+    "username": "Username",
+    "password": "Password",
+    "login": "Login"
+}
