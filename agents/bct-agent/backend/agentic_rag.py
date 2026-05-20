@@ -42,10 +42,11 @@ from pydantic import BaseModel
 import uvicorn
 
 # --- Constants ---
-FAISS_INDEX_PATH = "FAISS index"
-EMBEDDING_MODEL = "gemini-embedding-001"
+# UPDATED: Pointing to the new Master Index containing all regulations
+FAISS_INDEX_PATH = "FAISS_Index_Master_BCT"
+EMBEDDING_MODEL = "text-embedding-004" # UPDATED: Aligning with the ingestion model
 
-# --- Safe fallback values (now works because load_dotenv() is at the top) ---
+# --- Safe fallback values ---
 DEFAULT_PROVIDER = os.getenv("LLM_PROVIDER", "vertex")
 DEFAULT_LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.0-flash")
 
@@ -53,7 +54,7 @@ DEFAULT_LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.0-flash")
 vector_store = None
 agent_executor = None
 
-# --- NEW: TRACEABILITY TRACKER ---
+# --- TRACEABILITY TRACKER ---
 ACTIVE_LLM_INFO = {"provider": "unknown", "model": "unknown"}
 
 def get_llm(provider: str = None, model_name: str = None):
@@ -78,31 +79,31 @@ def get_llm(provider: str = None, model_name: str = None):
     try:
         if provider == "vertex":
             project_id = os.getenv("PROJECT_ID")
-            return ChatVertexAI(model_name=model_name, project=project_id)
+            return ChatVertexAI(model_name=model_name, project=project_id, temperature=0)
 
         elif provider == "groq":
             groq_api_key = os.getenv("GROQ_API_KEY")
             if not groq_api_key:
                 raise ValueError("GROQ_API_KEY environment variable is missing.")
-            return ChatGroq(groq_api_key=groq_api_key, model_name=model_name)
+            return ChatGroq(groq_api_key=groq_api_key, model_name=model_name, temperature=0)
 
         elif provider == "openrouter":
             or_api_key = os.getenv("OPENROUTER_API_KEY")
             if not or_api_key:
                 raise ValueError("OPENROUTER_API_KEY environment variable is missing.")
-            # OpenRouter is fully compatible with the OpenAI SDK
             return ChatOpenAI(
                 base_url="https://openrouter.ai/api/v1",
                 api_key=or_api_key,
-                model=model_name
+                model=model_name,
+                temperature=0
             )
 
-        elif provider == "ollama" or provider == "local":
-            # Ollama exposes an OpenAI-compatible API locally
+        elif provider in ["ollama", "local"]:
             return ChatOpenAI(
                 base_url="http://localhost:11434/v1",
-                api_key="ollama",  # API key is required by the SDK but ignored by Ollama
-                model=model_name
+                api_key="ollama", 
+                model=model_name,
+                temperature=0
             )
 
         else:
@@ -111,9 +112,6 @@ def get_llm(provider: str = None, model_name: str = None):
     except Exception as e:
         logger.error(f"Failed to initialize LLM provider '{provider}': {e}", exc_info=True)
         raise
-
-
-
 
 def load_config_and_init_services():
     """
@@ -124,7 +122,7 @@ def load_config_and_init_services():
 
     load_dotenv()
 
-    # --- Handle Google Credentials for Render ---
+    # --- Handle Google Credentials for Render/Local ---
     google_json = os.getenv("GOOGLE_CREDENTIALS_JSON")
     if google_json:
         try:
@@ -133,13 +131,11 @@ def load_config_and_init_services():
                 temp_path = temp.name
 
             os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = temp_path
-            logger.info(
-                f"Successfully loaded Google Credentials from env var to {temp_path}")
+            logger.info(f"Successfully loaded Google Credentials from env var to {temp_path}")
         except Exception as e:
-            logger.error(
-                f"Failed to process GOOGLE_CREDENTIALS_JSON: {e}", exc_info=True)
+            logger.error(f"Failed to process GOOGLE_CREDENTIALS_JSON: {e}", exc_info=True)
 
-    # Load core credentials (required for VertexAIEmbeddings regardless of LLM used)
+    # Load core credentials
     project_id = os.getenv("PROJECT_ID")
     location = os.getenv("LOCATION")
 
@@ -148,7 +144,7 @@ def load_config_and_init_services():
         logger.error(msg)
         raise ValueError(msg)
 
-    # Initialize Vertex AI SDK (Needed for Embeddings even if LLM is Groq/Ollama)
+    # Initialize Vertex AI SDK
     try:
         logger.info("Initializing Vertex AI SDK for Embeddings...")
         vertexai.init(project=project_id, location=location)
@@ -176,7 +172,6 @@ def load_config_and_init_services():
     logger.info("LLM initialized successfully.")
     return llm
 
-
 @tool
 def retrieve(query: str) -> Tuple[str, tuple]:
     """
@@ -187,27 +182,25 @@ def retrieve(query: str) -> Tuple[str, tuple]:
     """
     global vector_store
     if vector_store is None:
-        logger.warning(
-            "Retrieve tool called but Vector store is not initialized.")
+        logger.warning("Retrieve tool called but Vector store is not initialized.")
         return "Vector store not initialized.", tuple()
 
     logger.info(f"--- Searching knowledge base with query: '{query}' ---")
-    retrieved_docs = vector_store.similarity_search(query, k=4)
+    
+    # UPDATED: Increased k from 4 to 6 to handle deeper obsolescence cross-referencing
+    retrieved_docs = vector_store.similarity_search(query, k=6)
 
     unique_sources = set()
     serialized_content = []
 
     for doc in retrieved_docs:
         metadata_str = json.dumps(doc.metadata, ensure_ascii=False)
-        serialized_content.append(
-            f"Source: {metadata_str}\nContent: {doc.page_content}")
+        serialized_content.append(f"Source: {metadata_str}\nContent: {doc.page_content}")
         if 'source' in doc.metadata:
             unique_sources.add(doc.metadata['source'])
 
-    logger.debug(
-        f"Retrieved {len(retrieved_docs)} documents from vector store.")
+    logger.debug(f"Retrieved {len(retrieved_docs)} documents from vector store.")
     return "\n\n".join(serialized_content), tuple(unique_sources)
-
 
 def create_agent(llm):
     """Creates the RAG agent and executor."""
@@ -259,21 +252,17 @@ Your instructions are:
     )
     logger.info("RAG agent created successfully.")
 
-
 def get_rag_response(query: str) -> dict:
     """Invokes the RAG agent and processes the response."""
     global agent_executor, ACTIVE_LLM_INFO
     if agent_executor is None:
-        logger.error(
-            "Attempted to get RAG response but Agent is not initialized.")
+        logger.error("Attempted to get RAG response but Agent is not initialized.")
         return {"error": "Agent not initialized."}
 
     try:
         logger.debug(f"Invoking Agent Executor with query: {query}")
 
-        # --- NEW: TRACEABILITY LOG ---
-        logger.info(
-            f"🤖 TRACEABILITY -> Generating response using Provider: '{ACTIVE_LLM_INFO['provider']}' | Model: '{ACTIVE_LLM_INFO['model']}'")
+        logger.info(f"🤖 TRACEABILITY -> Generating response using Provider: '{ACTIVE_LLM_INFO['provider']}' | Model: '{ACTIVE_LLM_INFO['model']}'")
 
         response = agent_executor.invoke({"input": query})
 
@@ -291,10 +280,8 @@ def get_rag_response(query: str) -> dict:
         return {"answer": output_text, "sources": source_urls}
 
     except Exception as e:
-        logger.error(
-            f"An error occurred during agent invocation: {e}", exc_info=True)
+        logger.error(f"An error occurred during agent invocation: {e}", exc_info=True)
         return {"error": str(e)}
-
 
 # --- FastAPI Application ---
 app = FastAPI(
@@ -312,10 +299,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 class QueryRequest(BaseModel):
     question: str
-
 
 @app.on_event("startup")
 async def startup_event():
@@ -324,7 +309,6 @@ async def startup_event():
     llm = load_config_and_init_services()
     create_agent(llm)
     logger.info("Services initialized. Application is ready.")
-
 
 @app.post("/query")
 async def query_agent(request: QueryRequest):
@@ -336,22 +320,16 @@ async def query_agent(request: QueryRequest):
         return {"status": "error", "details": response["error"]}
     return {"status": "success", "data": response}
 
-
 def main_cli():
     """Main function for command-line execution."""
-    parser = argparse.ArgumentParser(
-        description="Query the BCT RAG agent from the command line.")
-    parser.add_argument("query", type=str,
-                        help="The question to ask the agent.")
-    parser.add_argument("--provider", type=str, default=DEFAULT_PROVIDER,
-                        help="LLM Provider (vertex, groq, openrouter, ollama)")
-    parser.add_argument("--model", type=str, default=DEFAULT_LLM_MODEL,
-                        help="Model name (e.g., gemini-2.0-flash, llama-3.1-8b-instant)")
+    parser = argparse.ArgumentParser(description="Query the BCT RAG agent from the command line.")
+    parser.add_argument("query", type=str, help="The question to ask the agent.")
+    parser.add_argument("--provider", type=str, default=DEFAULT_PROVIDER, help="LLM Provider (vertex, groq, openrouter, ollama)")
+    parser.add_argument("--model", type=str, default=DEFAULT_LLM_MODEL, help="Model name (e.g., gemini-2.0-flash, llama-3.1-8b-instant)")
     args = parser.parse_args()
 
     # Initialize services and agent for CLI mode
-    logger.info(
-        f"Starting in CLI mode (Provider: {args.provider}, Model: {args.model})...")
+    logger.info(f"Starting in CLI mode (Provider: {args.provider}, Model: {args.model})...")
 
     # Initialize global resources (FAISS/Embeddings)
     load_config_and_init_services()
@@ -370,10 +348,7 @@ def main_cli():
         print(f"\nSources:\n" + "\n".join(f"- {s}" for s in result['sources']))
     print("----------------------")
 
-
 if __name__ == "__main__":
-    # To run the CLI: python agentic_rag.py "Quels sont les avantages ?" --provider groq --model llama-3.1-8b-instant
-    # To run the FastAPI server: uvicorn agentic_rag:app --reload
     import sys
     if len(sys.argv) > 1 and not sys.argv[1].startswith("--"):
         main_cli()

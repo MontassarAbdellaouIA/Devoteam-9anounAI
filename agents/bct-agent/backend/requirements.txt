@@ -1,15 +1,19 @@
-langchain_core 
-langchain-google-vertexai
-langchain-google-genai
-langchain-experimental 
-langchain-community
-langchain-classic
-langchain-openai
-langchain-groq
-
-faiss-cpu  
-python-dotenv  
+# --- API & Web Framework ---
 fastapi
 uvicorn
-pytest 
-httpx
+
+# --- LangChain Ecosystem ---
+langchain>=0.1.0
+langchain-classic
+langchain-community
+langchain-core>=0.1.0
+langchain-google-vertexai>=0.0.5
+langchain-groq
+langchain-openai
+
+# --- Vector Database ---
+faiss-cpu>=1.7.4
+
+# --- Cloud & Utilities ---
+google-cloud-aiplatform>=1.40.0
+python-dotenv
