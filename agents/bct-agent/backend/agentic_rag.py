@@ -9,6 +9,7 @@ Usage (CLI):
 
 """
 import os
+import re
 import json
 import argparse
 import tempfile
@@ -187,8 +188,31 @@ def retrieve(query: str) -> Tuple[str, tuple]:
 
     logger.info(f"--- Searching knowledge base with query: '{query}' ---")
     
-    # UPDATED: Increased k from 4 to 6 to handle deeper obsolescence cross-referencing
-    retrieved_docs = vector_store.similarity_search(query, k=6)
+    # ==========================================================================
+    # AMÉLIORATION STRATÉGIQUE : RECHERCHE PAR DIVERSITÉ (MMR)
+    # ==========================================================================
+    # On va chercher les 30 meilleurs candidats sémantiques, puis on sélectionne 
+    # 8 documents en maximisant la diversité pour éviter qu'un seul vieux texte sature le contexte.
+    retrieved_docs = vector_store.max_marginal_relevance_search(
+        query, 
+        k=8,          # On augmente légèrement le nombre de chunks retournés à l'agent
+        fetch_k=35,   # Taille du pool de candidats scannés
+        lambda_mult=0.6 # Équilibre similarité (1.0) et diversité (0.0)
+    )
+
+    # ==========================================================================
+    # AMÉLIORATION STRATÉGIQUE : RE-RANKING TEMPOREL PAR LES MÉTADONNÉES
+    # ==========================================================================
+    # Fonction d'extraction d'année depuis la métadonnée 'date' ou 'filename'
+    def extract_year(doc_obj):
+        date_str = doc_obj.metadata.get("date", "0")
+        filename_str = doc_obj.metadata.get("filename", "")
+        years = re.findall(r'(20\d{2}|19\d{2})', f"{date_str} {filename_str}")
+        return int(years[0]) if years else 0
+
+    # On trie dynamiquement les morceaux pour que les années les plus récentes (2026, 2025)
+    # apparaissent TOUJOURS en haut du payload envoyé à l'Agent.
+    retrieved_docs.sort(key=extract_year, reverse=True)
 
     unique_sources = set()
     serialized_content = []
@@ -199,11 +223,12 @@ def retrieve(query: str) -> Tuple[str, tuple]:
         if 'source' in doc.metadata:
             unique_sources.add(doc.metadata['source'])
 
-    logger.debug(f"Retrieved {len(retrieved_docs)} documents from vector store.")
+    logger.info(f"🧬 MMR + Temporal Re-ranking: Sent {len(retrieved_docs)} verified chronological chunks to the agent.")
     return "\n\n".join(serialized_content), tuple(unique_sources)
 
+
 def create_agent(llm):
-    """Creates the RAG agent and executor."""
+    """Creates the RAG agent and executor with strict query generation constraints."""
     global agent_executor
 
     prompt = ChatPromptTemplate.from_messages([
@@ -215,7 +240,9 @@ Your instructions are:
 
 1. **Analyze the question**: Carefully read the user's question to understand their regulatory information needs, even if it is indirect or a clarification request.
 
-2. **MANDATORY tool usage**: For each question, you must use the `retrieve` tool to search for relevant information in the knowledge base (circulars, exchange regulations, etc.). This is your only source of truth.
+2. **MANDATORY tool usage & QUERY RULES**: For each question, you must use the `retrieve` tool to search for relevant information in the knowledge base.
+   - ⚠️ **CRITICAL SEARCH RULE**: You must NEVER strip out explicit years (e.g., 2026, 2025, 2024), specific article numbers, or unique proper nouns mentioned by the user when formulating the `query` string for the tool.
+   - If the user asks about "Hajj 2026", your tool input query MUST explicitly include the token "2026" and "Hajj". Stripping the year or numbers will cause total retrieval failure due to the massive volume of historical data.
 
 3. **Synthesize and Formulate**: Once the documents are retrieved, analyze their content and formulate a clear and concise answer in French or Arabic depending on the user's language.
 
@@ -227,10 +254,9 @@ Your instructions are:
 5. **Adaptive Effort**: 
    - If the exact answer is not explicitly present, try to clarify using the closest related regulatory concepts from the retrieved documents.  
    - Provide useful context or interpretation (e.g., explaining what "année civile" generally means in the context of BCT regulations).  
-   - If the document base is silent, state this clearly but guide the user towards what *is* defined in the regulations. Example:  
-     "Le terme 'année civile' n’est pas défini explicitement dans les documents de la BCT que j’ai consultés. Cependant, dans le contexte des allocations touristiques, il est généralement entendu comme la période allant du 1er janvier au 31 décembre."
+   - If the document base is silent, state this clearly but guide the user towards what *is* defined in the regulations.
 
-6. **User Engagement**: Structure responses to keep the user interested. After giving the main answer, you may suggest exploring related regulatory points that might help them (e.g., "Souhaitez-vous que je vous explique aussi les conditions applicables pour les adultes ?").
+6. **User Engagement**: Structure responses to keep the user interested. After giving the main answer, you may suggest exploring related regulatory points that might help them.
 
 7. **Language Rule**:  
    - If the question is in French (or any other language except Arabic), the response MUST be entirely in French.  
@@ -250,8 +276,9 @@ Your instructions are:
         verbose=True,
         return_intermediate_steps=True
     )
-    logger.info("RAG agent created successfully.")
-
+    logger.info("RAG agent created successfully with strict query validation rules.")
+    
+    
 def get_rag_response(query: str) -> dict:
     """Invokes the RAG agent and processes the response."""
     global agent_executor, ACTIVE_LLM_INFO
