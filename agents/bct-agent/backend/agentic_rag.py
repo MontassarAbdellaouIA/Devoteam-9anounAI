@@ -49,7 +49,7 @@ EMBEDDING_MODEL = "text-embedding-004" # UPDATED: Aligning with the ingestion mo
 
 # --- Safe fallback values ---
 DEFAULT_PROVIDER = os.getenv("LLM_PROVIDER", "vertex")
-DEFAULT_LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.0-flash")
+DEFAULT_LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.5-flash-lite")
 
 # --- Global Variables ---
 vector_store = None
