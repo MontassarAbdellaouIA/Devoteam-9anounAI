@@ -188,43 +188,39 @@ def retrieve(query: str) -> Tuple[str, tuple]:
 
     logger.info(f"--- Searching knowledge base with query: '{query}' ---")
     
-    # ==========================================================================
-    # AMÉLIORATION STRATÉGIQUE : RECHERCHE PAR DIVERSITÉ (MMR)
-    # ==========================================================================
-    # On va chercher les 30 meilleurs candidats sémantiques, puis on sélectionne 
-    # 8 documents en maximisant la diversité pour éviter qu'un seul vieux texte sature le contexte.
-    retrieved_docs = vector_store.max_marginal_relevance_search(
-        query, 
-        k=8,          # On augmente légèrement le nombre de chunks retournés à l'agent
-        fetch_k=35,   # Taille du pool de candidats scannés
-        lambda_mult=0.6 # Équilibre similarité (1.0) et diversité (0.0)
-    )
+    # 1. BROAD SEMANTIC FETCH (Sans pénalité MMR)
+    # On récupère un large spectre de documents très similaires (ex: k=20) 
+    # pour être certain de capturer TOUTES les versions temporelles d'une même loi.
+    raw_retrieved_docs = vector_store.similarity_search(query, k=20)
 
-    # ==========================================================================
-    # AMÉLIORATION STRATÉGIQUE : RE-RANKING TEMPOREL PAR LES MÉTADONNÉES
-    # ==========================================================================
-    # Fonction d'extraction d'année depuis la métadonnée 'date' ou 'filename'
+    # 2. FONCTION DE TRI TEMPOREL
     def extract_year(doc_obj):
         date_str = doc_obj.metadata.get("date", "0")
         filename_str = doc_obj.metadata.get("filename", "")
+        # Cherche une année dans la date ou le nom du fichier
         years = re.findall(r'(20\d{2}|19\d{2})', f"{date_str} {filename_str}")
         return int(years[0]) if years else 0
 
-    # On trie dynamiquement les morceaux pour que les années les plus récentes (2026, 2025)
-    # apparaissent TOUJOURS en haut du payload envoyé à l'Agent.
-    retrieved_docs.sort(key=extract_year, reverse=True)
+    # 3. RE-RANKING CHRONOLOGIQUE STRICT
+    # On trie les 20 documents du plus récent (2026) au plus ancien
+    raw_retrieved_docs.sort(key=extract_year, reverse=True)
+
+    # 4. TRONCATURE (Temporal Truncation)
+    # On ne garde que les 10 documents les plus récents parmi les plus pertinents
+    best_chronological_docs = raw_retrieved_docs[:10]
 
     unique_sources = set()
     serialized_content = []
 
-    for doc in retrieved_docs:
+    for doc in best_chronological_docs:
         metadata_str = json.dumps(doc.metadata, ensure_ascii=False)
         serialized_content.append(f"Source: {metadata_str}\nContent: {doc.page_content}")
         if 'source' in doc.metadata:
             unique_sources.add(doc.metadata['source'])
 
-    logger.info(f"🧬 MMR + Temporal Re-ranking: Sent {len(retrieved_docs)} verified chronological chunks to the agent.")
+    logger.info(f"⏳ Temporal Re-ranking: Sent {len(best_chronological_docs)} newest chunks to the agent.")
     return "\n\n".join(serialized_content), tuple(unique_sources)
+
 
 
 def create_agent(llm):
