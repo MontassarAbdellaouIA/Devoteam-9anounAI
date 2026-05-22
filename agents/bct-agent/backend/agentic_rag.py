@@ -49,7 +49,7 @@ EMBEDDING_MODEL = "text-embedding-004" # UPDATED: Aligning with the ingestion mo
 
 # --- Safe fallback values ---
 DEFAULT_PROVIDER = os.getenv("LLM_PROVIDER", "vertex")
-DEFAULT_LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.5-flash-lite")
+DEFAULT_LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.5-flash")
 
 # --- Global Variables ---
 vector_store = None
@@ -289,9 +289,33 @@ def get_rag_response(query: str) -> dict:
 
         response = agent_executor.invoke({"input": query})
 
-        output_text = response.get("output", "No output generated.")
-        source_urls = []
+        # --- FIX FOR GEMINI JSON/LIST PARSING ISSUE ---
+        raw_output = response.get("output", "No output generated.")
+        
+        # If Gemini returns the raw reasoning blocks (list of dicts)
+        if isinstance(raw_output, list):
+            clean_text_parts = []
+            for item in raw_output:
+                if isinstance(item, dict) and 'text' in item:
+                    clean_text_parts.append(item['text'])
+                elif isinstance(item, str):
+                    clean_text_parts.append(item)
+            output_text = "".join(clean_text_parts)
+        else:
+            output_text = str(raw_output)
 
+        # Remove any lingering dict strings that might have slipped through
+        # (Sometimes LangChain stringifies the list directly)
+        if output_text.startswith("[{'type': 'text',"):
+            try:
+                # Safely evaluate the stringified list
+                import ast
+                parsed_list = ast.literal_eval(output_text)
+                output_text = "".join([item.get('text', '') for item in parsed_list if isinstance(item, dict)])
+            except:
+                pass
+
+        source_urls = []
         intermediate_steps = response.get("intermediate_steps", [])
         if intermediate_steps:
             # The tool output is the second element of the tuple in the first step
